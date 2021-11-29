@@ -20,13 +20,18 @@ body {
     align-items: center;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
 
 /* Cubes */ 
 
 .scene {
     width:20em;
-    height:40em;
-    perspective:50em;
+    height:30em;
+    perspective:55em;
   }
 
   .cube {
@@ -68,5 +73,5 @@ body {
   .right  { transform: rotateY(90deg) translateZ(10em);  }
   .left   { transform: rotateY(-90deg) translateZ(10em); }
   .back   { transform: rotateY(180deg) translateZ(10em); }
-  .top    { transform: rotateX(90deg) translateZ(10em); }
-  .bottom { transform: rotateX(-90deg) translateZ(30em); }
+  .top    { transform: rotateX(90deg) translateZ(7.5em); }
+  .bottom { transform: rotateX(-90deg) translateZ(22.5em); }
