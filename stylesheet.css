@@ -1,4 +1,72 @@
 body {
+    margin: 0;
     background: rgb(176,164,104);
     background: linear-gradient(90deg, rgba(176,164,104,1) 0%, rgba(255,234,128,1) 17%, rgba(255,234,128,1) 87%, rgba(176,164,104,1) 100%);
 }
+
+#headertext {
+    font-size: 600%;
+    color: azure;
+    font-family: 'Sofia', sans-serif;
+    float: right;
+    padding: 100px; 
+}
+
+.flex {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* Cubes */ 
+
+.scene {
+    width:20em;
+    height:40em;
+    perspective:50em;
+  }
+
+  .cube {
+    width:100%;
+    height:100%;
+    position:relative;
+    animation: spinning 5s infinite;
+    transform-style:preserve-3d;
+  }
+  
+  @keyframes spinning {
+    from  { transform: translateZ(-5em) rotateY(0deg);   }
+    to    { transform: translateZ(-5em) rotateY(360deg); }
+  }
+
+.face-sides {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:rgba(3, 121, 255, 0.5);
+    
+    color:#FFF;
+    line-height:10em;
+    text-align:center;
+}
+
+.face-top-bottom {
+    width:100%;
+    height:50%;
+    position:absolute;
+    background-color:rgba(3, 121, 255, 0.5);
+    
+    color:#FFF;
+    line-height:10em;
+    text-align:center;
+}
+
+  .front  { transform: rotateY(0deg) translateZ(10em); }
+  .right  { transform: rotateY(90deg) translateZ(10em);  }
+  .left   { transform: rotateY(-90deg) translateZ(10em); }
+  .back   { transform: rotateY(180deg) translateZ(10em); }
+  .top    { transform: rotateX(90deg) translateZ(10em); }
+  .bottom { transform: rotateX(-90deg) translateZ(30em); }
